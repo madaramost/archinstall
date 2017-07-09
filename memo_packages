@@ -172,7 +172,7 @@ select_user(){
     pause_function
     configure_user_account
   }
-  #}}}
+#}}}
 #CONFIGURE SUDO {{{
 configure_sudo(){
   if ! is_package_installed "sudo" ; then

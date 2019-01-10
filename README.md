@@ -1,3 +1,2 @@
-# archinstall
-This is the arch install script it's an edited one.
-you can find the original here: https://github.com/helmuthdu/aui
+# My arch linux installation
+This is the arch installation same as arch wiki.

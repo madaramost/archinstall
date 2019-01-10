@@ -17,7 +17,7 @@
   16. `# locale-gen`
   17. `# echo LANG=en_US.UTF-8 > /etc/locale.conf`
   18. `# export LANG=en_US.UTF-8`
-  19. `# ln –s /usr/share/zoneinfo/Africa/Algiers /etc/localtime`
+  19. `# ln –s /usr/share/zoneinfo/Africa/Algiers /etc/localtime` edit your zoneinfo.
   20. `# hwclock --systohc --utc`
   21. `# echo X1C-Pro > /etc/hostname`
   22. `# mkinitcpio –p linux`

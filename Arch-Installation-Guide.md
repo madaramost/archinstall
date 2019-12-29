@@ -27,7 +27,7 @@
   ######Instaling EFISTUB boot loader #####<br/>
 `# pacman -S fuse intel-ucode ntfs-3g efibootmgr`<br/>
 `# efibootmgr --disk /dev/sda1 --part 1 --create --label "Arch Linux" --loader /vmlinuz-linux --unicode 'root=PARTUUID=ForRoot quiet loglevel=3 rd.systemd.show_status=auto rd.udev.log_priority=3 rw resume=PARTUUID=ForSwap initrd=/intel-ucode.img initrd=/initramfs-linux.img' --verbose`<br/>
-# efibootmgr -v` to list boot entry then choose boot entry by run:<br/>
+`# efibootmgr -v` to list boot entry then choose boot entry by run:<br/>
 `$ efibootmgr --bootorder XXXXX --verbose` where XXXXX is a numbre of boot entry<br/> 
 `# exit` then `$ umount -a`<br/>
 `# reboot`<br/>
@@ -43,11 +43,11 @@ connect to internet with `# nmcli or nmtui`<br/>
   #####Enable keyboard layout:###########<br/>
 `# sudo vim /etc/X11/xorg.conf.d/00-keyboard.conf` then add:<br/>
  ##################################################<br/>
- # Section "InputClass"<br/>
+ `# Section "InputClass"<br/>
  #       Identifier "system-keyboard"<br/>
  #       MatchIsKeyboard "on"<br/>
  #       Option "XkbLayout" "us,ara"<br/>
  #       Option "XkbModel" "pc104"<br/>
  #       Option "XkbOptions" "grp:alt_shift_toggle"<br/>
- # EndSection<br/>
+ # EndSection<br/>`
  ##################################################

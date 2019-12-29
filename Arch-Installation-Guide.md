@@ -44,10 +44,10 @@ connect to internet with `# nmcli or nmtui`<br/>
 `# sudo vim /etc/X11/xorg.conf.d/00-keyboard.conf` then add:<br/>
  ##################################################<br/>
  `# Section "InputClass"<br/>
- #       Identifier "system-keyboard"<br/>
- #       MatchIsKeyboard "on"<br/>
- #       Option "XkbLayout" "us,ara"<br/>
- #       Option "XkbModel" "pc104"<br/>
- #       Option "XkbOptions" "grp:alt_shift_toggle"<br/>
- # EndSection<br/>`
+        Identifier "system-keyboard"<br/>
+        MatchIsKeyboard "on"<br/>
+        Option "XkbLayout" "us,ara"<br/>
+        Option "XkbModel" "pc104"<br/>
+        Option "XkbOptions" "grp:alt_shift_toggle"<br/>
+  EndSection<br/>`
  ##################################################

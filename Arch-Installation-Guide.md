@@ -26,7 +26,7 @@
 `# mkinitcpio -P`
   ######Instaling EFISTUB boot loader #####
 `# pacman -S fuse intel-ucode ntfs-3g efibootmgr`
-`# efibootmgr --disk /dev/sda1 --part 1 --create --label "Arch Linux" --loader /vmlinuz-linux --unicode 'root=PARTUUID=ForRoot resume=PARTUUID=ForSwap quiet loglevel=3 rd.systemd.show_status=auto rd.udev.log_priority=3 ro initrd=/intel-ucode.img initrd=/initramfs-linux.img' --verbose`
+`# efibootmgr --disk /dev/sda1 --part 1 --create --label "Arch Linux" --loader /vmlinuz-linux --unicode 'root=PARTUUID=ForRoot quiet loglevel=3 rd.systemd.show_status=auto rd.udev.log_priority=3 rw resume=PARTUUID=ForSwap initrd=/intel-ucode.img initrd=/initramfs-linux.img' --verbose`
 # efibootmgr -v` to list boot entry then choose boot entry by run:
 `$ efibootmgr --bootorder XXXXX --verbose` where XXXXX is a numbre of boot entry 
 `# exit` then `$ umount -a`
@@ -37,7 +37,7 @@ connect to internet with `# nmcli or nmtui`
 `# reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist`.
 `# pacman -Syu`.
   ######Now install Needed futures:######
-`# sudo pacman -S bash-completion xorg alsa-utils pulseaudio zsh zsh-completions` then reboot.
+`# sudo pacman -S mesa vulkan-intel xorg bash-completion alsa-utils alsa-plugins pulseaudio pulseaudio-equalizer pulseaudio-alsa pulseaudio-bluetooth zsh zsh-completions` then reboot.
 `# sudo pacman -S gnome gnome-extra` if you wanna use gnome DE.
 `# sudo systemctl enable gdm.service`
   #####Enable keyboard layout:###########
